@@ -7,19 +7,18 @@ function AdminDashboard(){
   useEffect(()=>{
     axios.get("https://api-data-iv41.onrender.com/Products?_page=1&_limit=20")
     .then((data)=>{
-      console.log(data);
       datavalue(data.data)
     })
   },[])
     return (
         <>
         <Link to="/add_products"><Button>Add Product to site ...</Button></Link>
-        {dataa&&dataa.map((item)=>{
+        {dataa&&dataa.map((item,index)=>{
         return <Card
         direction={{ base: 'column', sm: 'row' }}
         overflow='hidden'
         variant='outline'
-        key={item.__id}
+        key={index}
       >
         <Image
           objectFit='cover'

@@ -29,10 +29,10 @@ function HomePage(){
         </div>
         </div>
         <button className="carousel-control-prev" style={{width:"5%"}} type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" style={{backgroundColor:"#00382a73",padding:"20px",borderRadius:"5px"}} aria-hidden="true"></span>
+            <span className="carousel-control-prev-icon" style={{backgroundColor:"#00382a73",borderRadius:"5px"}} aria-hidden="true"></span>
         </button>
         <button className="carousel-control-next" style={{width:"5%"}} type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-            <span className="carousel-control-next-icon"  style={{backgroundColor:"#00382a73",padding:"20px",borderRadius:"5px"}} aria-hidden="true"></span>
+            <span className="carousel-control-next-icon"  style={{backgroundColor:"#00382a73",borderRadius:"5px"}} aria-hidden="true"></span>
         </button>
       </div>
       <Center>
@@ -125,7 +125,6 @@ function HomePage(){
             <Center><Text m="20px" style={{textAlign:"center"}}>Your Must-Have SkinCeuticals Serum Wardrobe</Text></Center>
         </div>
        </div>
-       <hr style={{border: "1px solid black", margin:"20px 0px"}} />
          </div>
         </>
     )
