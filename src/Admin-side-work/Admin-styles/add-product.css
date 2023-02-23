@@ -1,0 +1,16 @@
+.Form{
+    margin: 20px;
+    border: 1px solid rgb(0, 73, 73);
+    padding: 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.Form>Input, .Form>Select, .Form>Textarea{
+    margin-bottom: 10px;
+}
+Button{
+    border: 2px solid teal;
+}
