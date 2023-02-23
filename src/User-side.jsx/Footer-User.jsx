@@ -1,41 +1,60 @@
-import { Center, Heading , Text } from "@chakra-ui/react";
+import { Button, Heading , Text } from "@chakra-ui/react";
 function Footer(){
     return (
         <>
+        <hr style={{border: "1px solid black", margin:"20px 0px"}} />
+        <div style={{margin:"20px",display:"flex"}}>
+            <div style={{width:"55%"}}>
+                <Text>Sign up to our newsletters and receive the latest exclusive discounts and deals</Text>
+                <Button bg="black" color="white" m="20px">SIGN ME UP</Button>
+            </div>
+            <div style={{width:"45%"}}>
+                <Text>Connect with us</Text>
+                <div>
+                <i className="fab fa-facebook" style={{fontSize:"30px",margin:"20px"}}></i>
+                <i className="fab fa-instagram"  style={{fontSize:"30px",margin:"20px"}}></i>
+                <i className="fab fa-telegram"  style={{fontSize:"30px",margin:"20px"}}></i>
+                <i className="fab fa-twitter"  style={{fontSize:"30px",margin:"20px"}}></i>
+                <i className="fab fa-youtube" style={{fontSize:"30px",margin:"20px"}}></i>
+                <i className="fab fa-whatsapp" style={{fontSize:"30px",margin:"20px"}}></i>
+                <i className="fab fa-linkedin" style={{fontSize:"30px",margin:"20px"}}></i>
+                </div>
+            </div>
+        </div>
         <div>
             <div style={{display:"flex"}}>
-                <div style={{width:"50%"}}>
+                <div style={{width:"45%", margin:"0% 5%", borderTop:"2px solid gray"}}>
                  <span>
-                    <p>Customer Service</p>
-                    <div>Help Center / FAQs</div>
-                    <div>Returns</div>
-                    <div>Shipping Information</div>
-                    <div>Track my order</div>
-                    <div>Cookie Settings</div>
+                    <p style={{margin:"10px"}}>Customer Service</p>
+                    <div style={{margin:"10px"}}><i className="fas fa-info-circle" style={{fontSize:"25px",margin:"0px 15px"}}></i>Help Center / FAQs</div>
+                    <div style={{margin:"10px"}}><i className="fas fa-sync" style={{fontSize:"25px",margin:"0px 15px"}}></i>Returns</div>
+                    <div style={{margin:"10px"}}><i className="fas fa-shipping-fast" style={{fontSize:"25px",margin:"0px 15px"}}></i>Shipping Information</div>
+                    <div style={{margin:"10px"}}><i className="far fa-life-ring" style={{fontSize:"25px",margin:"0px 15px"}}></i>Track my order</div>
+                    <div style={{margin:"10px"}}><i className="fas fa-dharmachakra" style={{fontSize:"25px",margin:"0px 15px"}}></i>Cookie Settings</div>
                  </span>
                 </div>
                 <div style={{width:"50%",display:"flex"}}>
-                <div style={{width:"30%"}}>
-                <div>My Account</div>
-                <div>Manage My Auto-Replenishments</div>
-                <div>My Rewards</div>
-                <div>My Favorites</div>
-                <div>Refer a Friend</div>
-                <div>Order History</div>
+                <div style={{width:"30%",borderTop:"2px solid gray",margin:"0% 5%"}}>
+                <div style={{margin:"10px"}}>My Account</div>
+                <div style={{margin:"10px"}}>Manage My Auto-Replenishments</div>
+                <div style={{margin:"10px"}}>My Rewards</div>
+                <div style={{margin:"10px"}}>My Favorites</div>
+                <div style={{margin:"10px"}}>Refer a Friend</div>
+                <div style={{margin:"10px"}}>Order History</div>
                 </div>
-                <div style={{width:"30%"}}>
-                 <div>Company</div>
-                 <div>About Us</div>
-                 <div>Press</div>
-                 <div>What is Klarna</div>
+                <div style={{width:"30%",borderTop:"2px solid gray",margin:"0% 5%"}}>
+                 <div style={{margin:"10px"}}>Company</div>
+                 <div style={{margin:"10px"}}>About Us</div>
+                 <div style={{margin:"10px"}}>Press</div>
+                 <div style={{margin:"10px"}}>What is Klarna</div>
                 </div>
-                <div style={{width:"30%"}}>
-                 <div>Legal</div>
-                 <div>Privacy Policy</div>
-                 <div>Terms & Conditions</div>
-                 <div>Modern Slavery Statement</div>
-                 <div>Product Recall</div>
-                 <div>Accessibility</div>
+                <div style={{width:"30%",borderTop:"2px solid gray",margin:"0% 5%"}}>
+                 <div style={{margin:"10px"}}>Legal</div>
+                 <div style={{margin:"10px"}}>Privacy Policy</div>
+                 <div style={{margin:"10px"}}>Terms & Conditions</div>
+                 <div style={{margin:"10px"}}>Modern Slavery Statement</div>
+                 <div style={{margin:"10px"}}>Product Recall</div>
+                 <div style={{margin:"10px"}}>Accessibility</div>
                 </div>
                 </div>
             </div>
