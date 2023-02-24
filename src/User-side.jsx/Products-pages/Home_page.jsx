@@ -1,6 +1,5 @@
 import { Center , Image , Heading , Button , Text , Stack , Divider } from "@chakra-ui/react";
 import Slider from "./Product-slider"
-import "../..//"
 function HomePage(){
     return(<>
     <div>
@@ -9,9 +8,10 @@ function HomePage(){
         <div className="carousel-indicators">
            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div className="carousel-inner">
-         <div className="carousel-item active" data-bs-interval="3000">
+         <div className="carousel-item active" data-bs-interval="2000">
           <Image src="https://static.thcdn.com/images/xlarge/webp/widgets/208-us/04/original-HomePage-1920x700-085804.jpeg" className="d-block w-100" alt="..."/>
          <div style={{position:"absolute",marginLeft:"55%",marginTop:"-400px",color:"white",maxWidth:"400px"}}>
          <Heading size='2xl' mb="20px">Introducing Sarah Chapman</Heading>
@@ -24,6 +24,14 @@ function HomePage(){
          <div style={{position:"absolute",marginLeft:"55%",marginTop:"-400px",color:"black",maxWidth:"400px"}}>
          <Heading size='2xl' mb="20px">New from Obagi</Heading>
          <Heading fontSize='xl' mb="20px">Helps to restore compromised skin & support its protective barrier.</Heading>
+           <Button bg="white" color="black" border="2px solid black" fontWeight="bolder">Shope Now...</Button>
+         </div>
+        </div>
+        <div className="carousel-item">
+         <Image src="https://static.thcdn.com/images/xlarge/webp/widgets/208-us/27/original-0223_47424_DS_MH_Shot_28_Batching_HomePage-1920x700.jpeg-061027.jpg" className="d-block w-100" alt="..."/>
+         <div style={{position:"absolute",marginLeft:"55%",marginTop:"-400px",color:"black",maxWidth:"400px"}}>
+         <Heading size='2xl' mb="20px">Meet Our Latest Best of Dermstore</Heading>
+         <Heading fontSize='xl' mb="20px">Discover some of our most indulgent & effective tools & formulas from Augustinus Bader, ELEMIS, U Beauty & more to turn your self-care day into the most luxurious spa experience.</Heading>
            <Button bg="white" color="black" border="2px solid black" fontWeight="bolder">Shope Now...</Button>
          </div>
         </div>

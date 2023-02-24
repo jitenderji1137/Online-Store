@@ -31,6 +31,14 @@ export default function MyForm() {
     }
     
     return (
+      <>
+       <div style={{display:"flex",justifyContent:"space-between" , margin:"20px 40px"}}>
+          <Link to="/admin_dashboard"><Button>Back to Admin Dashboard...</Button></Link>
+          <ButtonGroup>
+            <Link to="/"><Button>Home Page</Button></Link>
+            <Button>Create New Admin Account...</Button>
+          </ButtonGroup>
+        </div>
         <div style={{maxWidth:"500px",margin:"auto"}}>
       <form name="submit-to-google-sheet" onSubmit={handleSubmit} className="Form" ref={formRef}>
         <Textarea name="TITLE" type="text" placeholder="Title of Product ..." required />
@@ -56,6 +64,7 @@ export default function MyForm() {
         </ButtonGroup>
       </form>
       </div>
+      </>
     );
   }
 
