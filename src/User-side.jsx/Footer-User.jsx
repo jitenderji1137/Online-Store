@@ -29,7 +29,7 @@ function Footer(){
                     <div style={{margin:"10px"}}><i className="fas fa-info-circle" style={{fontSize:"25px",margin:"0px 15px"}}></i>Help Center / FAQs</div>
                     <div style={{margin:"10px"}}><i className="fas fa-sync" style={{fontSize:"25px",margin:"0px 15px"}}></i>Returns</div>
                     <div style={{margin:"10px"}}><i className="fas fa-shipping-fast" style={{fontSize:"25px",margin:"0px 15px"}}></i>Shipping Information</div>
-                    <div style={{margin:"10px"}}><i className="far fa-life-ring" style={{fontSize:"25px",margin:"0px 15px"}}></i>Track my order</div>
+                    <div style={{margin:"10px"}}><i className="fas fa-crosshairs" style={{fontSize:"25px",margin:"0px 15px"}}></i>Track my order</div>
                     <div style={{margin:"10px"}}><i className="fas fa-dharmachakra" style={{fontSize:"25px",margin:"0px 15px"}}></i>Cookie Settings</div>
                  </span>
                 </div>
