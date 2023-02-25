@@ -1,4 +1,4 @@
-import { Image , CardFooter , Card , Button , Text , Center , Heading } from "@chakra-ui/react"
+import { Image , Card , Text , Center , Heading } from "@chakra-ui/react"
 import { Navigate } from "react-router-dom"
 import axios from "axios";
 import { useState , useEffect ,useContext } from "react";

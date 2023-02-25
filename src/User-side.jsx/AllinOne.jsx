@@ -1,5 +1,5 @@
 import { useState , useEffect , useContext } from "react"
-import { Grid , Skeleton , Card , Center , Image , Stack , Heading , Text , Divider , ButtonGroup , Button , CardFooter } from "@chakra-ui/react"
+import { Grid , Skeleton , Card , Center , Image , Heading , Text , Button } from "@chakra-ui/react"
 import axios from "axios";
 import { fetchdata } from "../Data-manager"
 import SingleProductPage from "./SingleProductPage";
@@ -11,6 +11,7 @@ export default function AllinOne({value,single}){
     const [total,totalpage] = useState(1);
     useEffect(()=>{
         statevalue([])
+        document.title = "Online Store - "+value;
      axios.get(`https://api-data-iv41.onrender.com/Products?MAINCATEGORY=${value}&_page=${count}&_limit=20`)
      .then((res)=>{
         statevalue(res.data);

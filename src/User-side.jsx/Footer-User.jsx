@@ -1,23 +1,23 @@
-import { Button, Heading , Text } from "@chakra-ui/react";
+import { Button, Heading , Text, Link } from "@chakra-ui/react";
 function Footer(){
     return (
         <>
         <hr style={{border: "1px solid black", margin:"20px 0px"}} />
         <div style={{margin:"20px",display:"flex"}}>
             <div style={{width:"55%"}}>
-                <Text>Sign up to our newsletters and receive the latest exclusive discounts and deals</Text>
-                <Button bg="black" color="white" m="20px">SIGN ME UP</Button>
+                <Text>Follow our newsletters and receive the latest exclusive discounts and deals</Text>
+                <Button bg="black" color="white" m="20px">Follow us ...</Button>
             </div>
             <div style={{width:"45%"}}>
                 <Text>Connect with us</Text>
                 <div>
                 <i className="fab fa-facebook" style={{fontSize:"30px",margin:"20px"}}></i>
-                <i className="fab fa-instagram"  style={{fontSize:"30px",margin:"20px"}}></i>
+                <Link href="https://www.instagram.com/vijayji1137" isExternal><i className="fab fa-instagram"  style={{fontSize:"30px",margin:"20px"}}></i></Link>
+                <Link href="https://wa.link/yphqus" isExternal><i className="fab fa-whatsapp" style={{fontSize:"30px",margin:"20px"}}></i></Link>
+                <Link href="https://www.linkedin.com/in/jitender1137" isExternal><i className="fab fa-linkedin" style={{fontSize:"30px",margin:"20px"}}></i></Link>
                 <i className="fab fa-telegram"  style={{fontSize:"30px",margin:"20px"}}></i>
                 <i className="fab fa-twitter"  style={{fontSize:"30px",margin:"20px"}}></i>
                 <i className="fab fa-youtube" style={{fontSize:"30px",margin:"20px"}}></i>
-                <i className="fab fa-whatsapp" style={{fontSize:"30px",margin:"20px"}}></i>
-                <i className="fab fa-linkedin" style={{fontSize:"30px",margin:"20px"}}></i>
                 </div>
             </div>
         </div>
