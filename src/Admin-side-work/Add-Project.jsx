@@ -1,10 +1,15 @@
 import { Input , Button , Select , Textarea , ButtonGroup} from "@chakra-ui/react";
 import "./Admin-styles/add-product.css"
 import { useRef } from "react"
-import { Link } from "react-router-dom" 
+import { Link , useNavigate } from "react-router-dom" 
 import swal from 'sweetalert';
 import axios from "axios"
 export default function MyForm() {
+  const navi = useNavigate();
+  if((localStorage.getItem("admin")||"NO")==="NO"){
+   navi("/")
+  }
+  document.title = "Online Store :- Add Products ..."
   const formRef = useRef(null);
     const handleSubmit = (e) => {
       e.preventDefault();
@@ -36,7 +41,7 @@ export default function MyForm() {
           <Link to="/admin_dashboard"><Button>Back to Admin Dashboard...</Button></Link>
           <ButtonGroup>
             <Link to="/"><Button>Home Page</Button></Link>
-            <Button>Create New Admin Account...</Button>
+            <Link to="./create_admin_account"><Button>Create New Admin Account...</Button></Link>
           </ButtonGroup>
         </div>
         <div style={{maxWidth:"500px",margin:"auto"}}>

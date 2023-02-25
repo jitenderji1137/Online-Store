@@ -1,10 +1,15 @@
 import { useState , useEffect , useRef} from "react";
-import { Card, Image, CardBody, CardFooter , Stack , Heading , Text , Button , ButtonGroup , Grid, Center,Skeleton,Textarea,Input,Select } from '@chakra-ui/react'
-import { Link } from "react-router-dom"
+import { Image , Heading , Text , Button , ButtonGroup , Grid, Center,Skeleton,Textarea,Input,Select } from '@chakra-ui/react'
+import { Link , useNavigate } from "react-router-dom"
 import axios from "axios";
 import swal from 'sweetalert';
 function AdminDashboard(){
   window.scrollTo(0, 0);
+  const navi = useNavigate();
+  if((localStorage.getItem("admin")||"NO")==="NO"){
+   navi("/")
+  }
+  document.title = "Online Store :- Admin Dashboard...";
   let arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
   const [dataa,datavalue] = useState([]);
   const [count,countvalue] = useState(1);
@@ -101,7 +106,7 @@ function AdminDashboard(){
           <Link to="/"><Button>Home Page</Button></Link>
           <ButtonGroup>
             <Link to="/add_products"><Button>Add New Product...</Button></Link>
-            <Button>Create New Admin Account...</Button>
+            <Link to="./create_admin_account"><Button>Create New Admin Account...</Button></Link>
           </ButtonGroup>
         </div>
         <Grid templateColumns='repeat(2, 1fr)' gap={6}>

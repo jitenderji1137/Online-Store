@@ -1,9 +1,30 @@
-import { Center ,Heading,Image,Text,Box, ButtonGroup, Button ,   Accordion,AccordionItem,AccordionButton,AccordionPanel,AccordionIcon , Card , CardBody , Stack , Grid , CardFooter , Divider} from "@chakra-ui/react"
+import { Center ,Heading,Image,Text,Box, ButtonGroup, Button ,   Accordion,AccordionItem,AccordionButton,AccordionPanel,AccordionIcon , Card , CardBody , Stack , Divider} from "@chakra-ui/react"
 import { fetchdata } from "../Data-manager"
-import { useContext } from "react"
+import { useContext , useState , useEffect } from "react"
+import swal from "sweetalert";
 export default function SingleProductPage(){
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
     const data = useContext(fetchdata);
-    window.scrollTo(0, 0);
+    const [count,countvalue] = useState(1);
+    document.title = data.data.TITLE;
+    var localcartdata = JSON.parse(localStorage.getItem("cartdata"))||[];
+    const AddProducttocart = ()=>{
+            if((localStorage.getItem("login")||"NO" )=== "NO"){
+                swal("Please Login First to add product in cart","")
+            }
+            else{
+                if(localcartdata.find(obj => obj.id === data.data.id)){
+                    swal("Product Already Present in Cart ...", "", "error")
+                }
+                else{
+                    localcartdata.unshift(data.data)
+                    localStorage.setItem("cartdata",JSON.stringify(localcartdata))
+                    swal("Product Successfully Added to cart...","","success")
+                }
+            }
+            }
     return(
         <>
         <Center bg='aliceblue' h='50px' color='#5e3b3b' style={{fontWeight:"bolder"}}>Rewards members earn TRIPLE points on Hair Care. Ends 2/21. START EARNING</Center>
@@ -57,9 +78,9 @@ export default function SingleProductPage(){
                 <Text ml="10px">Quantity</Text>
                 <ButtonGroup mt="20px" ml="10px" display="flex" justifyContent="space-between">
                     <div>
-                    <Button>-</Button><Button>1</Button><Button>+</Button>
+                    <Button isDisabled={count===1} onClick={()=>{countvalue(count-1)}}>-</Button><Button>{count}</Button><Button onClick={()=>{countvalue(count+1)}}>+</Button>
                     </div>
-                    <Button>ADD TO CART</Button>
+                    <Button onClick={AddProducttocart}>ADD TO CART</Button>
                 </ButtonGroup>
                 <Text m="20px" fontWeight="bold"><i className="far fa-heart" style={{fontSize:"25px",margin:"10px"}}></i>Save to My Favorites</Text>
             </div>

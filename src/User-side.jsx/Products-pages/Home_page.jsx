@@ -1,6 +1,7 @@
-import { Center , Image , Heading , Button , Text , Stack , Divider } from "@chakra-ui/react";
+import { Center , Image , Heading , Button , Text } from "@chakra-ui/react";
 import Slider from "./Product-slider"
 function HomePage(){
+  document.title = "Online Store | Skin Care Website for Beauty Products "
     return(<>
     <div>
         <Center bg='aliceblue' h='50px' color='#5e3b3b' style={{fontWeight:"bolder"}}>Rewards members earn TRIPLE points on Hair Care. Ends 2/21. START EARNING</Center>
@@ -16,7 +17,7 @@ function HomePage(){
          <div style={{position:"absolute",marginLeft:"55%",marginTop:"-400px",color:"white",maxWidth:"400px"}}>
          <Heading size='2xl' mb="20px">Introducing Sarah Chapman</Heading>
          <Heading fontSize='xl' mb="20px">Discover cutting-edge formulas from London's most sought-after facialist.</Heading>
-           <Button bg="white" color="black" border="2px solid black" fontWeight="bolder">Shope Now...</Button>
+           <Button bg="white" color="black" border="2px solid black" fontWeight="bolder">Shop Now...</Button>
          </div>
          </div>
         <div className="carousel-item">
@@ -24,7 +25,7 @@ function HomePage(){
          <div style={{position:"absolute",marginLeft:"55%",marginTop:"-400px",color:"black",maxWidth:"400px"}}>
          <Heading size='2xl' mb="20px">New from Obagi</Heading>
          <Heading fontSize='xl' mb="20px">Helps to restore compromised skin & support its protective barrier.</Heading>
-           <Button bg="white" color="black" border="2px solid black" fontWeight="bolder">Shope Now...</Button>
+           <Button bg="white" color="black" border="2px solid black" fontWeight="bolder">Shop Now...</Button>
          </div>
         </div>
         <div className="carousel-item">
@@ -32,7 +33,7 @@ function HomePage(){
          <div style={{position:"absolute",marginLeft:"55%",marginTop:"-400px",color:"black",maxWidth:"400px"}}>
          <Heading size='2xl' mb="20px">Meet Our Latest Best of Dermstore</Heading>
          <Heading fontSize='xl' mb="20px">Discover some of our most indulgent & effective tools & formulas from Augustinus Bader, ELEMIS, U Beauty & more to turn your self-care day into the most luxurious spa experience.</Heading>
-           <Button bg="white" color="black" border="2px solid black" fontWeight="bolder">Shope Now...</Button>
+           <Button bg="white" color="black" border="2px solid black" fontWeight="bolder">Shop Now...</Button>
          </div>
         </div>
         </div>
