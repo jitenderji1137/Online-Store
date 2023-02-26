@@ -54,10 +54,15 @@ export default function CartPage(){
             swal(`Your order of $${localStorage.getItem("totalprice")}.00 has been placed`,"","success")
             itsvalue(false);
             }} className="Form">
-        <Textarea type="text" placeholder="Your Name ..." required />
+        <Heading fontSize="xl">YOUR NAME...</Heading>
+        <Textarea type="text" placeholder="Your Name ..." required/>
+        <Heading fontSize="xl">MOBILE NUMBER...</Heading>
         <Input type="number" placeholder="Mobile Number ..."required />
-        <Input type="email" placeholder="Email ID..." required />
+        <Heading fontSize="xl">EMAIL ID...</Heading>
+        <Input type="email" placeholder="Email ID..." />
+        <Heading fontSize="xl">PIN CODE...</Heading>
         <Input type="number" placeholder="Pin Code..." required />
+        <Heading fontSize="xl">YOUR ADDRESS...</Heading>
         <Textarea type="text" placeholder="Your Address ..." required />
         <ButtonGroup style={{display:"flex",justifyContent:"space-between"}}>
            <Button onClick={()=>{itsvalue(false)}}>Cancel</Button>

@@ -141,7 +141,7 @@ function AdminDashboard(){
             <Button w="50px" m="0px 20px" isDisabled>{count}</Button>
             {count===total?<Button w="100px" isDisabled>Next</Button>:<Button onClick={()=>{countvalue(count+1)}}>Next</Button>}
         </Center>
-       {formview? <div style={{position:"fixed",width:"400px",top:"50%",left:"50%",transform: "translate(-50%, -50%)",backgroundColor:"white",borderRadius:"10px", boxShadow: "rgb(0 0 0 / 20%) -1px 6px 20px 20px"}}>
+       {formview? <div style={{position:"fixed",width:"400px",top:"50%",left:"50%",zIndex:"9999",transform: "translate(-50%, -50%)",backgroundColor:"white",borderRadius:"10px", boxShadow: "rgb(0 0 0 / 20%) -1px 6px 20px 20px"}}>
         <Center><Heading mt="10px">Update data</Heading></Center>
         <form name="submit-to-google-sheet" onSubmit={handleSubmit} className="Form" ref={formRef}>
         <Textarea value={tit} name="TITLE" type="text" placeholder="Title of Product ..." onChange={(e)=>{titlee(e.target.value)}} required />
