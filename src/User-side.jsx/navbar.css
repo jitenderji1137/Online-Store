@@ -1,0 +1,25 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    z-index: 9999;
+  }
+  .routes {
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1;
+    transition: top 1s;
+    -webkit-transition: top 1s;
+    -moz-transition: top 1s;
+    -ms-transition: top 1s;
+    -o-transition: top 1s;
+}
+  
+  .routes--hidden {
+    top: -100px;
+  }

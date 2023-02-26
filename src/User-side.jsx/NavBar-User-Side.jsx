@@ -11,6 +11,7 @@ import CartPage from "./CartPage"
 import Login from "./Products-pages/Login"
 import { fetchdata } from "../Data-manager"
 import swal from "sweetalert"
+import "./navbar.css"
 import CreateAdminAccount from "../Admin-side-work/createadminaccount"
 function UserNavBar(){
     const isAdmin = useContext(fetchdata)
@@ -44,10 +45,10 @@ function UserNavBar(){
     }
     return(
         <>
-        <div style={{height:"70px",display:"flex",justifyContent:"space-around",borderBottom:"2px solid gray",margin:"10px"}}>
-            <Center><Link to="/"><Heading><span style={{fontSize:"70px",color:"red"}}>O</span>nline <span style={{fontSize:"50px",color:"red"}}>S</span>tore</Heading></Link></Center>
+        <div className="navbar" style={{height:"70px",display:"flex",justifyContent:"space-around",borderBottom:"2px solid gray"}}>
+            <Center><Link to="/"><Heading><span style={{fontSize:"50px",color:"red"}}>O</span>nline <span style={{fontSize:"50px",color:"red"}}>S</span>tore</Heading></Link></Center>
             <Center><div><ButtonGroup>
-                <Input value={textdata} placeholder="Type to search..."  onKeyPress={(e) => {
+                <Input width="30vw" value={textdata} placeholder="Type to search..."  onKeyPress={(e) => {
                         if (e.key === "Enter") {
                              navi("/search")
                         }
@@ -62,6 +63,7 @@ function UserNavBar(){
                 </ButtonGroup>
                 </div></Center>       
         </div>
+        <div style={{height:"80px"}}></div>
         <Routes>
             <Route path="/" element={<Home/>}></Route>
             <Route path="/search" element={<Search text={textdata}/>}></Route>

@@ -11,23 +11,28 @@ export default function Search({text}){
     const [redd,redirect] = useState(false);
     const [count,countvalue] = useState(1);
     const [total,totalpage] = useState(1);
+    const [sort,sortvalue] = useState("");
     useEffect(()=>{
         statevalue([])
         document.title = "Online Store - "+text;
-     axios.get(`https://api-data-iv41.onrender.com/Products?q=${text}&_page=${count}&_limit=20`)
+     axios.get(`https://api-data-iv41.onrender.com/Products?q=${text}&_page=${count}&_limit=20${sort}`)
      .then((res)=>{
         statevalue(res.data);
         res.data.length ===0? queryvalue(false):queryvalue(true);
         var i = (res.headers["x-total-count"]);
         totalpage( Math.ceil(i / 20));
      })
-    },[text,count,total])
+    },[text,count,total,sort])
     useEffect(()=>{
       countvalue(1);
-    },[text])
+    },[text,sort])
     function ControlOnClick(item){
         singledata.data = item;
         redirect(true);
+    }
+    function sortbyass(val){
+        statevalue([]);
+        sortvalue(`&_sort=PRICE&_order=${val}`);
     }
     return(
         <>
@@ -59,6 +64,12 @@ export default function Search({text}){
         :
         <>
         <Center><Heading>{`Showing Results For ${text} ...`}</Heading></Center>
+        <div style={{margin:"20px 25% 0px 25%",display:"flex",justifyContent:"space-around",width:"50%"}}>
+          <Button border="none">Sort by</Button>
+          <Button border="none" onClick={()=>{sortbyass("asc")}}>Price -- Low to High</Button>
+          <Button border="none" onClick={()=>{sortbyass("desc")}}>Price -- High to Low</Button>
+          <Button border="none" onClick={()=>{sortvalue("")}}>Clear filter</Button>
+        </div>
         <Grid templateColumns='repeat(5, 1fr)' gap={6}>
         {state.map((item,index)=>{
             return(
